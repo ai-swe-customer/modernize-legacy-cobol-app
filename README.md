@@ -210,10 +210,39 @@ Please create the test plan in a markdown table format. The test plan should cov
 ### Note
 
 *You may still need follow up with another prompt to generate the markdown file format for the test plan.*
-
 ```markdown
 Convert this to markdown syntax please to insert as a new file
 ```
+
+## Testing the COBOL Implementation
+
+The COBOL implementation includes unit tests using the CobolUnit framework.
+
+### Prerequisites
+- GnuCOBOL compiler (already installed as per setup instructions)
+- CobolUnit framework
+
+### Setting Up CobolUnit
+1. Clone the CobolUnit repository:
+```bash
+git clone https://github.com/neopragma/cobol-unit.git
+```
+2. Set the COBOLUNIT environment variable to point to the CobolUnit directory:
+```bash
+export COBOLUNIT=/path/to/cobol-unit
+```
+
+### Running the Tests
+1. Navigate to the project directory
+2. Make the test script executable:
+```bash
+```
+3. Run the tests:
+```bash
+./tests/run_tests.sh
+```
+
+The test output will show which tests passed or failed.
 
 ## Convert files using prompt engineering best practices
 
