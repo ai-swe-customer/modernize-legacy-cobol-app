@@ -1,0 +1,12 @@
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. TestCreditInput.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 INPUT-AMOUNT       PIC 9(6)V99 VALUE 500.00.
+
+       PROCEDURE DIVISION.
+           DISPLAY INPUT-AMOUNT.
+           STOP RUN.
+       END PROGRAM TestCreditInput.

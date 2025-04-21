@@ -60,6 +60,22 @@ brew install gnucobol
 
 - Option 2: Open the terminal in the GitHub codespace or Ubuntu Linux system and run the following command to install the COBOL compiler:
 
+
+## COBOL Testing
+
+The COBOL application includes unit tests for all operations. To run the tests:
+
+1. Install GnuCOBOL 3.1 or later if not already installed
+2. Run all tests:
+```bash
+cobc -x -j tests/test_*.cob operations.cob
+```
+
+To run individual test files, replace the wildcard with the specific test file name.
+
+The tests will display "TEST PASSED" for successful assertions or show detailed failure information if any test fails.
+
+
 ```bash
 sudo apt-get update && \
 sudo apt-get install gnucobol
@@ -78,6 +94,10 @@ cobc -x main.cob operations.cob data.cob -o accountsystem
 ```bash
 ./accountsystem
 ```
+
+## Testing
+
+See [TESTING.md](TESTING.md) for detailed instructions on running the COBOL unit tests.
 
 ## Program Interaction Example
 
