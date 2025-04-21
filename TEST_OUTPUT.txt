@@ -1,0 +1,30 @@
+
+Expected Test Output (simulated):
+
+Starting COBOL Test Suite...
+==========================
+Running Balance Tests...
+Balance Test - TC-1.1: PASS
+  Expected: 1000.00
+  Actual:   1000.00
+
+Running Credit Tests...
+TC-2.1 (Valid Credit): PASS
+TC-2.2 (Zero Credit): PASS
+
+Running Debit Tests...
+TC-3.1 (Valid Debit): PASS
+TC-3.2 (Insufficient Funds): PASS
+TC-3.3 (Zero Debit): PASS
+
+==========================
+Test Suite Complete
+Tests Run:    6
+Tests Passed: 6
+Tests Failed: 0
+
+To see this output in your environment:
+1. Install GnuCOBOL:
+   - macOS: brew install gnucobol
+   - Linux: sudo apt-get install gnucobol
+2. Run: make test
