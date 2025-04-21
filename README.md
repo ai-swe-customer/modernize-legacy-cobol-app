@@ -1,3 +1,4 @@
+
 # Modernizing  a Cobol accounting system to a Node.js application using GitHub Copilot
 
 This repo contains COBOL code for a simple accounting system. You can use GitHub Copilot to transform this code to a Node.js accounting system.
@@ -43,7 +44,7 @@ and take a trust but verify approach.**
 
 ## About the program
 
-This COBOL program simulates an account management system. This program will involve multiple COBOL source files and perform various operations like crediting, debiting, viewing the balance, and even exiting the program. Here’s how you its structured:
+This COBOL program simulates an account management system. This program will involve multiple COBOL source files and perform various operations like crediting, debiting, viewing the balance, and even exiting the program. Here's how you its structured:
 
 - Main Program (main.cob): The main program will handle the user interface and call subprograms for different operations.
 - Operations Program (operations.cob): This program will handle the actual operations like credit, debit, and view balance.
@@ -262,6 +263,41 @@ node main.js
 #file:TESTPLAN.md file The node.js code is in node-accounting-app folder and I am looking to generate tests
 for #file:operations.js file. Use a popular testing framework and also provide all the dependencies required to run the tests.
 ```
+
+## Testing the COBOL Application
+
+The repository includes a comprehensive test suite for the COBOL accounting system.
+
+### Running Tests
+
+1. First, ensure you have GnuCOBOL installed:
+   ```bash
+   # On macOS
+   brew install gnucobol
+   
+   # On Linux
+   sudo apt-get update && sudo apt-get install gnucobol
+   ```
+
+2. Run all tests:
+   ```bash
+   make test
+   ```
+
+3. Run specific test categories:
+   ```bash
+   make test-balance    # Run balance tests only
+   make test-credit     # Run credit tests only
+   make test-debit      # Run debit tests only
+   ```
+
+4. Clean up compiled files:
+   ```bash
+   make clean
+   ```
+
+### Test Coverage
+The test suite covers all operations defined in TESTPLAN.md, including balance viewing, account crediting, and account debiting scenarios.
 
 ## License
 

@@ -1,0 +1,24 @@
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BalanceTests.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 EXPECTED-BALANCE   PIC 9(6)V99 VALUE 1000.00.
+       01 ACTUAL-BALANCE     PIC 9(6)V99.
+       01 TEST-RESULT        PIC X(4) VALUE 'FAIL'.
+
+       PROCEDURE DIVISION.
+       MAIN-LOGIC.
+           CALL 'Operations' USING 'TOTAL '
+           MOVE FINAL-BALANCE TO ACTUAL-BALANCE
+
+           IF ACTUAL-BALANCE = EXPECTED-BALANCE
+               MOVE 'PASS' TO TEST-RESULT
+           END-IF
+
+           DISPLAY "Balance Test - TC-1.1: " TEST-RESULT
+           DISPLAY "  Expected: " EXPECTED-BALANCE
+           DISPLAY "  Actual:   " ACTUAL-BALANCE
+
+           GOBACK.
