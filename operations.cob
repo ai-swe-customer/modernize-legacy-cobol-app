@@ -22,19 +22,21 @@
                ACCEPT AMOUNT
                CALL 'DataProgram' USING 'READ', FINAL-BALANCE
                ADD AMOUNT TO FINAL-BALANCE
-               CALL 'DataProgram' USING 'WRITE', FINAL-BALANCE
+               CALL 'data' USING 'WRITE', FINAL-BALANCE
                DISPLAY "Amount credited. New balance: " FINAL-BALANCE
 
            ELSE IF OPERATION-TYPE = 'DEBIT '
                DISPLAY "Enter debit amount: "
                ACCEPT AMOUNT
-               CALL 'DataProgram' USING 'READ', FINAL-BALANCE
+               CALL 'data' USING 'READ', FINAL-BALANCE
                IF FINAL-BALANCE >= AMOUNT
                    SUBTRACT AMOUNT FROM FINAL-BALANCE
-                   CALL 'DataProgram' USING 'WRITE', FINAL-BALANCE
+                   CALL 'data' USING 'WRITE', FINAL-BALANCE
                    DISPLAY "Amount debited. New balance: " FINAL-BALANCE
                ELSE
                    DISPLAY "Insufficient funds for this debit."
                END-IF
+           ELSE IF OPERATION-TYPE = 'EXIT  '
+               DISPLAY "Application exiting"
            END-IF
            GOBACK.
