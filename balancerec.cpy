@@ -1,0 +1,6 @@
+
+       01 BALANCE-REC.
+           05 BALANCE-OPERATION PIC X(6).
+           05 BALANCE-AMOUNT    PIC 9(6)V99.
+           05 BALANCE-TEST-FLAG PIC X.
+           05 BALANCE-VALUE     PIC 9(6)V99.
