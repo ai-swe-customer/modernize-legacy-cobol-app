@@ -1,0 +1,22 @@
+
+{
+  "name": "accounting-app",
+  "version": "1.0.0",
+  "description": "Node.js Accounting Application converted from COBOL",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "jest --coverage",
+    "install": "npm install decimal.js"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
