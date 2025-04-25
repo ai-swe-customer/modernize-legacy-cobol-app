@@ -36,10 +36,17 @@ npm test  # Runs tests with coverage
 
 ## Technical Details
 - **Precision Handling**: Uses decimal.js for accurate financial calculations
-- **Modules**:
-  - `data.js`: In-memory data storage
-  - `operations.js`: Business logic (credit/debit operations)
-  - `main.js`: CLI interface
+- **File Structure**:
+  ```
+  .
+  ├── src/
+  │   ├── data.js        # In-memory data storage
+  │   ├── operations.js  # Business logic
+  │   └── main.js        # CLI interface
+  ├── package.json
+  ├── README.md
+  └── operations.test.js
+  ```
 - **Dependencies**:
   - decimal.js: Precise decimal arithmetic
   - readline-sync: CLI input handling

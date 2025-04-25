@@ -5,7 +5,7 @@ import Decimal from 'decimal.js';
 describe('Accounting Operations', () => {
     beforeEach(() => {
         // Reset balance before each test
-        const { write } = require('./data.js');
+        const { write } = require('../src/data.js');
         write(new Decimal('1000.00'));
     });
 
