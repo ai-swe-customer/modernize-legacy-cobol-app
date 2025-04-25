@@ -1,11 +1,11 @@
 
 import { getBalance, credit, debit } from './operations.js';
+import { write } from '../src/data.js';
 import Decimal from 'decimal.js';
 
 describe('Accounting Operations', () => {
     beforeEach(() => {
         // Reset balance before each test
-        const { write } = require('../src/data.js');
         write(new Decimal('1000.00'));
     });
 
